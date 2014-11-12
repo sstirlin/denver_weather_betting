@@ -16,7 +16,7 @@ do
 
     epoch=`date --utc "+%s" -d"$year-$month-${day}T$hour:$minute:$second"`
 
-    data=`grep -o '<p class="myforecast-current-lrg">[0-9]*&deg;F' $f | sed 's/<p class="myforecast-current-lrg">//g' | sed 's/&deg;F//g'`
+    data=`grep -o '<p class="myforecast-current-lrg">[-0-9]*&deg;F' $f | sed 's/<p class="myforecast-current-lrg">//g' | sed 's/&deg;F//g'`
 
     # seed the initial value of the clock if necesary and skip to next iteration (as long as temp less than 25 degrees)
     if [ -z $start ]
