@@ -40,9 +40,9 @@ do
 
     cold_seconds=`bc <<< "($cold_duration%60)"`
     cold_minutes=`bc <<< "(($cold_duration/60)%60)"`
-    cold_hours=`bc <<< "(($cold_duration/3600)%60)"`
+    cold_hours=`bc <<< "($cold_duration/3600)"`
     echo $timestamp "|"  $data "degrees | Coldsnap duration:" $cold_hours "h" $cold_minutes "m" $cold_seconds "s"
-    if test $cold_duration -ge 172800
+    if test $cold_duration -ge 259200
     then
         echo "48 hours achieved!"
     fi
