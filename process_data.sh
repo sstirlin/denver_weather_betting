@@ -44,7 +44,7 @@ do
     echo $timestamp "|"  $data "degrees | Coldsnap duration:" $cold_hours "h" $cold_minutes "m" $cold_seconds "s"
     if test $cold_duration -ge 259200
     then
-        echo "48 hours achieved!"
+        echo "72 hours achieved!"
     fi
 
 done
